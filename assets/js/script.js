@@ -18,3 +18,24 @@ $('#btn').on('click', function() {
         $('#test').append(outputs);
 });
 });
+
+$('#btnTwo').on('click', function() {
+
+        var tag = "taurus";
+        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=iTlqWT1GAonqCLPWWB15I2HfB3BaNfp5&tag=" + tag + "&rating=pg";
+      
+        $.ajax({
+          url: queryURL,
+          method: "GET"
+        })
+          .then(function(responseTwo) {
+            console.log(responseTwo)
+            var results = responseTwo.data.images.original.url;
+            var imgTag = $("<img>");
+            imgTag.attr("src", results);
+            console.log(results);
+            $('#testTwo').append(imgTag);
+
+            
+});
+});
