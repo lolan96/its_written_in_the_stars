@@ -14,15 +14,10 @@ $('#btn').on('click', function() {
     $.ajax(settings).then(function (response) {
         console.log(response);
 
-        var outputs = response.description;
+        var outputs = response.color;
         $('#test').append(outputs);
-});
-});
 
-$('#btnTwo').on('click', function() {
-
-        var tag = "taurus";
-        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=iTlqWT1GAonqCLPWWB15I2HfB3BaNfp5&tag=" + tag + "&rating=pg";
+        var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=iTlqWT1GAonqCLPWWB15I2HfB3BaNfp5&tag=" + outputs + "&rating=pg";
       
         $.ajax({
           url: queryURL,
@@ -38,4 +33,8 @@ $('#btnTwo').on('click', function() {
 
             
 });
+});
+
+
+       
 });
