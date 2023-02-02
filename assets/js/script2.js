@@ -1,6 +1,9 @@
-$('#btn').on('click', function() {
+$( document ).ready(function() {
 
-    location.replace('index2.html')
+  var nameLocalStorage = localStorage.getItem("nameEntry");
+  var starSignLocalStorage = localStorage.getItem("starSignEntry")
+  console.log(starSignLocalStorage)
+  console.log(nameLocalStorage);
 
     const settings = {
         "async": true,
@@ -14,15 +17,12 @@ $('#btn').on('click', function() {
     };
     
     $.ajax(settings).then(function (response) {
-        // response.preventDefault();
-        // const nameInput = $('#nameInput').val();
-        // const starSign = $('#exampleFormControlSelect1').val();
-        // console.log(nameInput, starSign);
-
         console.log(response);
+        
 
         var outputs = response.color;
-        $('#color').append(outputs);
+        console.log(typeof outputs);
+        $('#color').append(nameLocalStorage);
 
         var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=iTlqWT1GAonqCLPWWB15I2HfB3BaNfp5&tag=" + outputs + "&rating=pg";
       
@@ -36,10 +36,11 @@ $('#btn').on('click', function() {
             var imgTag = $("<img>");
             imgTag.attr("src", results);
             console.log(results);
-            $('#testTwo').append(imgTag);
+            $('#picture').append(imgTag);
 
             
 });
+
 });
 
 
