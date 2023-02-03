@@ -1,0 +1,19 @@
+header {
+    text-align: center;
+   font-size: 5em;
+    
+}
+
+body{
+    background-color: black;
+    
+}
+
+#button{
+    text-align: center;
+}
+
+#image1{
+    position: relative;
+    left: 10px;
+}
