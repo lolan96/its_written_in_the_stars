@@ -73,3 +73,8 @@ $( document ).ready(function() {
     });
 
   });
+
+  $('#return').on('click', function() {
+     location.replace('index1.html')
+
+});
