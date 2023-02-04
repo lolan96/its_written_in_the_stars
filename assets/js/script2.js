@@ -23,15 +23,15 @@ $( document ).ready(function() {
         // apending name to webpage
         $('#name').append(nameFortune);
 
-       // output for color from aztro API
-        var colorOutput = response.color;
+        // output for color value from aztro API 
+        var colorOutputVal = "Your lucky color is... " + response.color;
        // appending color to webpage
-        $('#color').append(colorOutput).val();
+        $('#color').append(colorOutputVal).val();
 
-       // output for lucky number from aztro API
-        var numberOutput = response.lucky_number;
+       // output for lucky number value from aztro API 
+        var numberOutputVal = "Your lucky number is... " + response.lucky_number;
        // apending lucky number to webpage
-        $('#number').append(numberOutput).val();
+        $('#number').append(numberOutputVal).val();
 
        // ouput for mood from aztro API
         var moodOutput = response.mood;
@@ -40,6 +40,11 @@ $( document ).ready(function() {
         var fortuneOutput = response.description;
         $('#fortune').append(fortuneOutput).val();
 
+       // output for color from aztro API to link to giphy API
+        var colorOutput = response.color;
+
+       // output for lucky number from aztro API to link to giphy API
+        var numberOutput = response.lucky_number;
 
        // API call for giphy API with color output
         var queryURLcolor = "https://api.giphy.com/v1/gifs/random?api_key=iTlqWT1GAonqCLPWWB15I2HfB3BaNfp5&tag=" + colorOutput + "&rating=pg";
@@ -54,6 +59,7 @@ $( document ).ready(function() {
             var results = responseTwo.data.images.original.url;
             var imgTag = $("<img>");
             imgTag.attr("src", results);
+            imgTag.attr("alt", "Your color gif: " + colorOutput);
             console.log(results);
             $('#colorGIF').append(imgTag);
         });
@@ -71,6 +77,7 @@ $( document ).ready(function() {
             var results2 = responseThree.data.images.original.url;
             var imgTag2 = $("<img>");
             imgTag2.attr("src", results2);
+            imgTag2.attr("alt", "Your color gif: " + moodOutput);
             console.log(results2);
             $('#moodGIF').append(imgTag2);
         });

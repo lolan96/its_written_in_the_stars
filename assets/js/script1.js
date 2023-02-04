@@ -1,4 +1,5 @@
-$('#btn').on('click', function() {
+$('#form').on('submit', function (event) {
+    event.preventDefault();
     var nameEntry = $("#nameInput").val();
     var starSignEntry = $("#starSigns").val();
     console.log(starSignEntry);
