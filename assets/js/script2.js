@@ -2,9 +2,8 @@ $( document ).ready(function() {
  // localstorage ouputs for starsign and name
   var nameLocalStorage = localStorage.getItem("nameEntry");
   var starSignLocalStorage = localStorage.getItem("starSignEntry")
-  console.log(starSignLocalStorage);
-  console.log(nameLocalStorage);
-    // api call for data based on starsign
+  
+    // aztro API
     const settings = {
         "async": true,
         "crossDomain": true,
@@ -15,25 +14,34 @@ $( document ).ready(function() {
             "X-RapidAPI-Host": "sameer-kumar-aztro-v1.p.rapidapi.com"
         }
     };
-    
+    // API call for aztro api with data based on starsign
     $.ajax(settings).then(function (response) {
         console.log(response);
+
+        // appending name to web page
         var nameFortune = nameLocalStorage + ", your daily fortune awaits...";
+        // apending name to webpage
         $('#name').append(nameFortune);
 
-       // output for color from starsign api
+       // output for color from aztro API
         var colorOutput = response.color;
+       // appending color to webpage
         $('#color').append(colorOutput).val();
+
+       // output for lucky number from aztro API
         var numberOutput = response.lucky_number;
+       // apending lucky number to webpage
         $('#number').append(numberOutput).val();
+
+       // ouput for mood from aztro API
         var moodOutput = response.mood;
+
+       // output for fortune from aztro API
         var fortuneOutput = response.description;
         $('#fortune').append(fortuneOutput).val();
 
 
-        
-      
-        // api call for giphy api with colorOutput
+       // API call for giphy API with color output
         var queryURLcolor = "https://api.giphy.com/v1/gifs/random?api_key=iTlqWT1GAonqCLPWWB15I2HfB3BaNfp5&tag=" + colorOutput + "&rating=pg";
 
        // placing random gif based on color on page
@@ -42,39 +50,34 @@ $( document ).ready(function() {
           method: "GET"
         }) 
           .then(function(responseTwo) {
-            console.log(responseTwo)
+            console.log(responseTwo);
             var results = responseTwo.data.images.original.url;
             var imgTag = $("<img>");
             imgTag.attr("src", results);
             console.log(results);
             $('#colorGIF').append(imgTag);
-        
-        
         });
-       
+        
+        // API call for giphy API with mood output
         var queryURLmood = "https://api.giphy.com/v1/gifs/random?api_key=iTlqWT1GAonqCLPWWB15I2HfB3BaNfp5&tag=" + moodOutput + "&rating=pg";
 
-        // placing mood gif based on color on page
+        // placing mood gif based on mood on page
         $.ajax({
           url: queryURLmood,
           method: "GET"
         }) 
           .then(function(responseThree) {
-            console.log(responseThree)
+            console.log(responseThree);
             var results2 = responseThree.data.images.original.url;
             var imgTag2 = $("<img>");
             imgTag2.attr("src", results2);
             console.log(results2);
             $('#moodGIF').append(imgTag2);
-
-            
         });
-
-    });
-
-  });
-
+    });  
+});
+  // button that allows user to retutn to landing page
   $('#return').on('click', function() {
      location.replace('index1.html')
 
-});
+  });
