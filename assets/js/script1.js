@@ -7,6 +7,6 @@ $('#form').on('submit', function (event) {
 
     localStorage.setItem("nameEntry",nameEntry);
     localStorage.setItem("starSignEntry",starSignEntry);
-    location.replace('index2.html')
+    location.replace('landing.html')
 
 });

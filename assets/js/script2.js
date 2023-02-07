@@ -91,6 +91,6 @@ $( document ).ready(function() {
 });
   // button that allows user to retutn to landing page
   $('#return').on('click', function() {
-     location.replace('index1.html')
+     location.replace('index.html')
 
   });
