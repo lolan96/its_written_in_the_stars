@@ -4,41 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,500&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="assets/css/style.css"/>
     <title>Document</title>
 </head>
 <body>
-    <header class="container-fluid" id="">It's written in the stars</header>
-
-    <div class="container-fluid">
+  <header class="container-fluid">it's written in the stars</header>
+  
+    <div class="background-container">
+      <img class="moon" src="assets/images/half_moon.png" alt="">
+      <div class="stars"></div>
+      <div class="twinkling"></div>
+      <div class="clouds"></div>
+    </div>
+  
+    <div class="grid" id="results">
         
+      <div id="name"></div>
 
+      <div id="fortune"></div>
+
+      <div id="mood">
+        <p>Today you'll feel...</p>
+      </div>
     
-<!--Target outside div for first row & inside divs for other two rows.-->
+      <div id="number">
+        <p>Your lucky number is...</p>
+      </div>
+      
+      <div id="color">
+       <p>Your lucky color is...</p>
+      </div>
+      
+      <div id="moodGIF"></div>
+      <div id="colorGIF"></div>
 
-<!-- grid sspan12 for "name", your daily fortune awaits / takes up the whole row -->
-    <center>
-        <div class="row">
-         <div class="col-12" id="name"> </div>
-        </div>
-    </center>
-<!-- grid;  1fr for number and colour, 2fr for fortune (1fr 2fr 1fr) -->
-        <div class="row">
-          <div class="col-4" id="number"> </div>
-          <div class="col-4" id="fortune"> </div>
-          <p class="col-4" id="color"> </p>
-        </div>
-<!-- grid;  1fr for number and colour, 2fr for fortune (1fr 2fr 1fr) -->
-        <div class="row">
-            <div class="col-6" id="moodGIF"> </div>
-            <div class="col-6" id="colorGIF"> </div>
-          </div>
-        </div>
+    </div>
       
       <div id="button"> <button type="submit" class="btn btn-primary mb-2" id="return">Return</button></div>
 
+      <footer> This is a footer </footer>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/js/script2.js"></script>
 </body>
 </html>
+
