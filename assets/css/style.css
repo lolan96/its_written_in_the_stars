@@ -343,6 +343,7 @@ button {
     header {
         font-size: 4.2em;
         margin-bottom: 0.4em;
+        font-style: italic;
     }
     .grid {
         display: grid;
@@ -372,6 +373,8 @@ button {
     header {
         font-size: 3em;
         margin-bottom: 0.7em;
+        font-style: italic;
+
     }
 
     body {
@@ -386,7 +389,7 @@ button {
         margin: 0;
         margin-bottom: 10px;
         grid-template-columns: minmax(0, 1fr);
-        grid-template-rows: 30px 130px 60px 60px 60px minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: 30px 140px 60px 60px 60px minmax(0, 1fr) minmax(0, 1fr);
         grid-template-areas: 
          "name name name"
          "fortune fortune fortune"
@@ -403,6 +406,7 @@ button {
 
     #fortune {
         font-size: 1.2em;
+        font-style: bold;
 
     }
 }
