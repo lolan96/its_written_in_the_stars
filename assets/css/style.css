@@ -86,13 +86,12 @@ body {
     margin: 0;
     margin-bottom: 10px;
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-    grid-template-rows: 20px 50px 50px minmax(0, 1fr);
+    grid-template-rows: 30px 70px 100px minmax(0, 1fr);
     grid-template-areas: 
      "name name name name name name"
      "fortune fortune fortune fortune fortune fortune"
      "mood mood number number color color"
      "moodGIF moodGIF moodGIF colorGIF colorGIF colorGIF";
-     color: #fff;
 }
   
 #name {
@@ -102,6 +101,8 @@ body {
     justify-content: center;
     color: #fff;
     font-size: 1.4em;
+    text-align: center;
+
 }
 
 #fortune {
@@ -336,4 +337,73 @@ button {
   font-family: monospace;
   border-color: white;
   font-size: 0.9em;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    header {
+        font-size: 4.2em;
+        margin-bottom: 0.4em;
+    }
+    .grid {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 40px;
+        margin: 0;
+        margin-bottom: 10px;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-rows: 30px 100px 100px minmax(0, 1fr);
+        grid-template-areas: 
+         "name name name name name name"
+         "fortune fortune fortune fortune fortune fortune"
+         "mood mood number number color color"
+         "moodGIF moodGIF moodGIF colorGIF colorGIF colorGIF";
+    }
+    #name {
+        font-size: 1.3em;
+    }
+
+    #fortune {
+        font-size: 1.3em;
+
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    header {
+        font-size: 3em;
+        margin-bottom: 0.7em;
+    }
+
+    body {
+        margin-left: 50px;
+        margin-right: 50px;
+       
+    }
+   
+    .grid {
+        display: grid;
+        column-gap: 20px;
+        row-gap: 40px;
+        margin: 0;
+        margin-bottom: 10px;
+        grid-template-columns: minmax(0, 1fr);
+        grid-template-rows: 30px 130px 60px 60px 60px minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-areas: 
+         "name name name"
+         "fortune fortune fortune"
+         "mood mood mood"
+         "number number number"
+         "color color color"
+         "moodGIF moodGIF moodGIF"
+         "colorGIF colorGIF colorGIF";
+    }
+
+    #name {
+        font-size: 1.2em;
+    }
+
+    #fortune {
+        font-size: 1.2em;
+
+    }
 }
