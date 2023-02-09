@@ -339,6 +339,7 @@ button {
   font-size: 0.9em;
 }
 
+/* for tablet */
 @media (min-width: 768px) and (max-width: 1024px) {
     header {
         font-size: 4.2em;
@@ -365,16 +366,15 @@ button {
 
     #fortune {
         font-size: 1.3em;
-
     }
 }
 
+/* for mobile */
 @media (min-width: 320px) and (max-width: 480px) {
     header {
         font-size: 3em;
         margin-bottom: 0.7em;
         font-style: italic;
-
     }
 
     body {
@@ -406,7 +406,5 @@ button {
 
     #fortune {
         font-size: 1.2em;
-        font-style: bold;
-
     }
 }

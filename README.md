@@ -16,12 +16,16 @@ The website can be accessed [here](https://lolanewell.github.io/its_written_in_t
 The user inputs their name and star sign and clicks the submit button to view their daily fortune (including lucky number, mood and color). The user is able to return to the original screen by clicking the return button.
 
 ## Screenshots
+Desktop
+![Screenshot of the application](assets/images/MD1.png)
 
-![Screenshot of the application](/its_written_in_the_stars/assets/images/MD1.png)
+![Screenshot of the application](assets/images/MD2.png)
 
-![Screenshot of the application](/its_written_in_the_stars/assets/images/MD2.png)
+Tablet
+![Screenshot of the application](assets/images/MD3tablet.jpg)
 
-![Screenshot of the application](/its_written_in_the_stars/assets/images/MD3tablet.jpg)
+Mobile
+![Screenshot of the application](assets/images/MD4mobile.jpeg)
 
 ## Credits & Resoucres
 
