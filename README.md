@@ -16,6 +16,7 @@ The website can be accessed [here](https://lolanewell.github.io/its_written_in_t
 The user inputs their name and star sign and clicks the submit button to view their daily fortune (including lucky number, mood and color). The user is able to return to the original screen by clicking the return button.
 
 ## Screenshots
+
 Desktop
 ![Screenshot of the application](assets/images/MD1.png)
 
@@ -41,6 +42,7 @@ The following tutorials and/or references used in the project:\
 -[Transparent moon background](https://toppng.com/free-image/moon-no-background-PNG-free-PNG-Images_277440)
 
 ## Contributors
+
 Thanks to the following people who have contributed to this project:\
 [Laura Barrow](https://github.com/lbarrow91) \
 [Lola Newell](https://github.com/lolanewell)\
