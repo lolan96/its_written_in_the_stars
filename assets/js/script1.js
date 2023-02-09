@@ -9,4 +9,14 @@ $('#form').on('submit', function (event) {
     localStorage.setItem("starSignEntry",starSignEntry);
     location.replace('landing.html')
 
+    
+
 });
+
+$( document ).ready(function() {
+    var nameLocalStorage = localStorage.getItem("nameEntry");
+    var starSignLocalStorage = localStorage.getItem("starSignEntry")
+
+    $('#nameInput').val(nameLocalStorage);
+    $("#starSigns").val(starSignLocalStorage)
+})
